@@ -29,6 +29,7 @@ function be_popia_compliant_active_check() {
         }
     
         if ( 200 === $response_code ) {
+
             $trim_brackets = trim($body, "[{}]");
             $explode = explode(',', $trim_brackets); 
             $trim_date = str_replace('"renew_date":', '', $explode[1]); 
